@@ -1,0 +1,75 @@
+.contenedor-juego{
+   background-image: url('../imagenes/fondo.png'); /* Cambia esto por la ruta de tu imagen */
+  background-size: auto; /* Mantiene el tamaño original de la imagen */
+  background-repeat: repeat; /* Hace que la imagen se repita */
+  background-position: top left; /* Posiciona la imagen en la esquina superior izquierda */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */ 
+  justify-content: center;
+}
+.piedra,.papel,.tijera{
+    width: 100px;
+    height: 170px;
+}
+
+.contenedor-manos {
+  display: flex; /* Sin comillas */
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+
+}
+.piedra{
+    width: 100px;
+    height: 180px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.papel{
+    width: 100px;
+    height: 180px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.tijera{
+    width: 100px;
+    height: 180px;
+    cursor: pointer;
+}
+.contenedor-juego .mano.seleccionada {
+    height: 200px;
+  opacity: 1;
+  z-index: 2; /* Para que quede arriba */
+}
+.contenedor-juego .mano.no-seleccionada {
+    margin-bottom: -30px;
+  opacity: 0.5;
+  z-index: 1;
+}
+@media (min-width: 900px) {
+    .contenedor-juego .piedra{
+      width: 150px;
+      height: 250px;
+    }
+    .contenedor-juego .papel{
+      width: 150px;
+      height: 250px;
+    }
+    .contenedor-juego .tijera{
+      width: 150px;
+      height: 250px;
+    }
+    .contenedor-juego .circulo{
+      width: 300px;
+      height: 300px;
+      font-size: 80px;
+    }
+    .contenedor-juego .mano.seleccionada{
+      height: 330px;
+    }
+  }
+
